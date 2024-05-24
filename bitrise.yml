@@ -10,6 +10,8 @@ workflows:
     - golint:
     - errcheck:
     - go-test:
+        inputs:
+        - packages: ./step
     - path::./:
         inputs:
           - test_type: instrumentation
